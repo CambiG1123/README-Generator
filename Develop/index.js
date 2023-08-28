@@ -70,7 +70,12 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((responses) =>{
+        console.log("Creating your Professional README please wait")
+        writeToFile("Develop\README.md",generateMarkdown({...responses}))
+    })
+}
 
 // Function call to initialize app
 init();
