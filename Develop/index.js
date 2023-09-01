@@ -67,7 +67,12 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Takes in the file name and the data to be written
+// combines the path for the current working directory with the fileName to find the file to write in
+// writes the data
+function writeToFile(fileName, data) {
+  return fS.writeFileSync(path.join(process.cwd(),fileName),data)
+}
 
 // TODO: Create a function to initialize app
 function init() {
