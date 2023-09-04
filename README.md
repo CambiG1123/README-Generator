@@ -5,7 +5,7 @@
   ## Deployed Application URL
   NA
   ## Screenshot
-  ![alt-text](<images/screenshot.png>)
+  ![alt-text](<Develop/images/screenshot.png>)
   ## Table of Contents
   * [Features](#features)
   * [Languages & Dependencies](#languagesanddependencies)
