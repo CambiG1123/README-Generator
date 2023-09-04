@@ -5,7 +5,7 @@
   ## Deployed Application URL
   
   ## Screenshot
-  ![alt-text](<Develop/images/screenshot.png>)
+ ![Alt text](images/screenshot.png)
   ## Table of Contents
   * [Features](#features)
   * [Languages & Dependencies](#languagesanddependencies)
