@@ -29,7 +29,7 @@ export function generateMarkdown(data) {
   ## Deployed Application URL
   ${data.link}
   ## Screenshot
-  ![alt-text](${data.screenshot})
+  ![alt-text](<${data.screenshot}>)
   ## Table of Contents
   * [Features](#features)
   * [Languages & Dependencies](#languagesanddependencies)
