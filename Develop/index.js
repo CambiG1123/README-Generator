@@ -1,41 +1,41 @@
 // TODO: Include packages needed for this application
-const inquirer = import('inquirer')
-const fS = require('fs')
-const path = require('node:path')
-const generateMarkdown = require("Develop/utils/generateMarkdown.js")
+import inquirer from 'inquirer';
+import fs from 'fs';
+import path from 'path';
+import {generateMarkdown} from './generateMarkdown.js';
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
     type: "input",
     name: "title",
-    message: "What is the name of your project?",
+    message: "What is the name of your project?"
   },
   {
     type: "input",
     name: "description",
-    message: "Please give a description of your project",
+    message: "Please give a description of your project."
   },
   {
     type: "input",
     name: "screenshot",
-    message:"If you would like to include a screenshot, please provide the relative path to your screenshot image file"
+    message:"If you would like to include a screenshot, please provide the relative path to your screenshot image file."
   },
   {
     type: "input",
     name: "link",
-    message: "What is the URL of your deployed application"
+    message: "What is the URL of your deployed application."
   },
   {
     type: "checkbox",
     name: "license",
-    message: "Please select a license for this project if applicable",
+    message: "Please select a license for this project if applicable.",
     choices: ["MIT", "APACHE2.0", "Boost1.0", "MPL2.0", "BSD2", "BSD3", "none"],
   },
   {
     type: "input",
     name: "require",
-    message: "Please list all the dependencies of this project",
+    message: "Please list all the dependencies of this project.",
   },
   {
     type: "input",
@@ -71,14 +71,14 @@ const questions = [
 // combines the path for the current working directory with the fileName to find the file to write in
 // writes the data
 function writeToFile(fileName, data) {
-  return fS.writeFileSync(path.join(process.cwd(),fileName),data)
+  return fs.writeFileSync(path.join(process.cwd(),fileName),data)
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((responses) =>{
         console.log("Creating your Professional README please wait")
-        writeToFile("Develop\README.md",generateMarkdown({...responses}))
+        writeToFile("/README.md",generateMarkdown({...responses}))
     })
 }
 
